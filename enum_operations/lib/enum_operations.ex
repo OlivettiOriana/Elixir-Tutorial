@@ -37,4 +37,14 @@ defmodule EnumOperations do
     list
   end
 
+  def concat(a, b \\ [])
+
+  def concat([head | tail], b) do
+    concat(tail, [head | b])
+  end
+
+  def concat([], b) do
+    b
+  end
+
 end
