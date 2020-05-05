@@ -4,28 +4,26 @@ defmodule Helloworld do
   """
 
   @doc """
-  There are two functions..
-  #1. Helloworld.hello/0
-    Shows Hello World in the shell.
-      iex> Helloworld.hello()
-      "Hello World"
-
-  #2. Helloworld.hello/1
-    Says hello to the given "name".
-
-      iex> Helloworld.hello("Oriana")
-      "Hello Oriana"
+  Shows Hello World in the shell.
 
   ## Examples
-
       iex> Helloworld.hello()
       "Hello World"
-
   """
   def hello do
     "Hello World"
   end
 
+  @doc """
+  Says hello to the given "name".
+
+  ## Parameters
+  - name: String that represents the name of the person.
+
+  ## Examples
+      iex> Helloworld.hello("Oriana")
+      "Hello Oriana"
+  """
   def hello(name) do
     "Hello #{name}"
   end
