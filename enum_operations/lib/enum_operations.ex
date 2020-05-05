@@ -11,6 +11,9 @@ defmodule EnumOperations do
       iex> EnumOperations.count([])
       0
 
+      iex> EnumOperations.count([1, 2, 3, 4])
+      4
+
   """
   def count(arg1, arg2 \\ 0)
 
@@ -19,8 +22,19 @@ defmodule EnumOperations do
   end
 
   def count([], counter) do
-    counter 
+    counter
   end
 
+  def reverse(list) do
+    reverse(list, [])
+  end
+
+  defp reverse([head | tail], list) do
+    reverse(tail, [head | list])
+  end
+
+  defp reverse([], list) do
+    list
+  end
 
 end
