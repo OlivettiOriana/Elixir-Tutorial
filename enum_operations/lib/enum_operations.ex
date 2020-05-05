@@ -39,6 +39,10 @@ defmodule EnumOperations do
 
   def concat(a, b \\ [])
 
+  def concat([head | tail], b) when is_list(head) do
+    concat(tail, concat(head, b))
+  end
+
   def concat([head | tail], b) do
     concat(tail, [head | b])
   end
