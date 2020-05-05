@@ -5,4 +5,8 @@ defmodule HelloworldTest do
   test "greets the world" do
     assert Helloworld.hello() == "Hello World"
   end
+
+  test "greets someone" do
+    assert Helloworld.hello("Lucas") == "Hello Lucas"
+  end
 end

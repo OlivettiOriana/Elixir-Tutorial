@@ -4,7 +4,17 @@ defmodule Helloworld do
   """
 
   @doc """
-  Hello world.
+  There are two functions..
+  #1. Helloworld.hello/0
+    Shows Hello World in the shell.
+      iex> Helloworld.hello()
+      "Hello World"
+
+  #2. Helloworld.hello/1
+    Says hello to the given "name".
+
+      iex> Helloworld.hello("Oriana")
+      "Hello Oriana"
 
   ## Examples
 
@@ -14,5 +24,9 @@ defmodule Helloworld do
   """
   def hello do
     "Hello World"
+  end
+
+  def hello(name) do
+    "Hello #{name}"
   end
 end
