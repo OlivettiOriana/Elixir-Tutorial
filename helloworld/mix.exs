@@ -15,7 +15,7 @@ defmodule Helloworld.MixProject do
       homepage_url: "http://YOUR_PROJECT_HOMEPAGE",
       docs: [
         # The main page in the docs
-        main: "Hello World",
+        main: "Helloworld",
         logo: "../elixir-logo.jpg",
         extras: ["README.md"]
       ]
