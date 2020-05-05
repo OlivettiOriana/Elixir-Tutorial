@@ -51,4 +51,24 @@ defmodule EnumOperations do
     b
   end
 
+  # def filter_list([head | tail], fun, acc \\ []) do
+  #   if fun.(head) do
+  #     filter_list(tail, fun, [head|acc])
+  #   else
+  #     filter_list(tail, fun, acc)
+  #   end
+  # end
+
+  def filter([head | tail], function, acc \\ []) do
+    if function.(head) do
+      filter(tail, function, [head|acc])
+    else
+      filter(tail, function, acc)
+    end
+  end
+
+  def filter([], _fun, acc) do
+    acc
+  end
+
 end
