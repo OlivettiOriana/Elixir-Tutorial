@@ -1,21 +1,21 @@
-defmodule FizzBuzz.MixProject do
+defmodule WordCount.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :fizz_buzz,
+      app: :word_count,
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
 
       # Docs
-      name: "FizzBuzz Tutorial",
+      name: "WorldCount Tutorial",
       source_url: "https://github.com/OlivettiOriana/Elixir-Tutorial",
       homepage_url: "http://YOUR_PROJECT_HOMEPAGE",
       docs: [
         # The main page in the docs
-        main: "FizzBuzz",
+        main: "WordCount",
         extras: ["README.md"]
       ]
     ]
