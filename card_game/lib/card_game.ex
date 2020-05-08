@@ -52,18 +52,43 @@ defmodule CardGame do
     {deck, players ++ [player]}
   end
 
-  # #only two players per round
+  #only two players per round
   # def play_round(players) do
   #   {player1 | player2} = players
-  #   for hand1 <- player1["hand"], hand2 <- player2["hand"] do
-  #     if hand1 > hand2 do
-  #       player1["points"] = player1["points"] + 1
-  #       player2["points"] = player2["points"] - 1
-  #     else
-  #       player2["points"] = player2["points"] + 1
-  #       player1["points"] = player1["points"] - 1
+  #   play_round(player1, player2)
+    # for hand1 <- player1["hand"], hand2 <- player2["hand"] do
+    #   if hand1 > hand2 do
+    #     player1["points"] = player1["points"] + 1
+    #     player2["points"] = player2["points"] - 1
+    #   else
+    #     player2["points"] = player2["points"] + 1
+    #     player1["points"] = player1["points"] - 1
+    #   end
+    # end
+  # end
+  # def play_round({player1 | player2} = players) do
+  #   [card1 | hand1] = player1["hand"]
+  #   [card2 | hand2] = player2["hand"]
+
+  #   cond do
+  #     card1 > card2 ->
   #     end
   #   end
+  #   if card1 or card2 == [] do
+
+  #   if card1 > card2 do
+  #     player1 = Map.update(player1, "points", 50, &(&1 ++ 1))
+  #     player2 = Map.update(player2, "points", 50, &(&1 -- 1))
+  #   else
+  #     player1 = Map.update(player1, "points", 50, &(&1 -- 1))
+  #     player2 = Map.update(player2, "points", 50, &(&1 ++ 1))
+  #   end
+
+  #   player1 = Map.update(player1, "hand", [], hand1)
+  #   player2 = Map.update(player2, "hand", [], hand2)
+
+  #   play_round([player1 | player2])
+
   # end
 
 end
